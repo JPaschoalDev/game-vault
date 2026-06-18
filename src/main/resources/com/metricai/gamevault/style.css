@@ -1,0 +1,272 @@
+/*================================================================
+                   GAME VAULT - TEMA: RETRÔ GAMER
+        PALETA: #1B1B3A | #4EF3C9 | #FF2E88 | #FFD166 | #F7F7FF
+ =================================================================*/
+
+/* FONTE PERSONALIZADA */
+@font-face {
+    -fx-font-family: "Press Start 2P";
+    src: url("fonts/PressStart2P-Regular.ttf");
+}
+
+/* FUNDO GERAL */
+.root{
+    -fx-background-color: #1B1B3A;
+    -fx-font-family: "Press Start 2P", "Segoe UI", Arial, sans-serif;
+    -fx-font-size: 11px;
+}
+
+/* LABELS */
+.label{
+    -fx-text-fill: #F7F7FF;
+    -fx-font-size: 14px;
+}
+
+/* LABEL TÍTULO */
+.titulo-app{
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #4EF3C9
+}
+.subtitulo{
+    -fx-font-size: 14px;
+    -fx-text-fill: #FFD166;
+}
+
+/* TABELA */
+.table-view{
+    -fx-background-color: #1B1B3A;
+    -fx-border-color: #4EF3C9;
+    -fx-border-width: 1px;
+    -fx-border-radius: 12px;
+    -fx-background-radius: 12px;
+}
+.table-view .column-header-background{
+    -fx-background-color: #2A2A5A;
+    -fx-background-radius: 12 12 0 0;
+}
+.table-view .column-header .label{
+    -fx-text-fill: #1B1B3A;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}
+.table-view .table-cell{
+    -fx-text-fill: #F7F7ff;
+    -fx-border-color: transparent;
+}
+.table-row-cell:even{
+    -fx-background-color: #1B1B3A;
+}
+.table-row-cell:odd{
+    -fx-background-color: #24244A;
+}
+.table-row-cell:selected{
+    -fx-background-color: #4EF3C9;
+}
+.table-row-cell:selected .table-cell {
+    -fx-text-fill: #1B1B3A;
+}
+.table-row-cell:hover {
+    -fx-background-color: #2E2E6A;
+}
+
+/* LINHAS VAZIAS */
+.table-row-cell:empty {
+    -fx-background-color: #1B1B3A;
+}
+.table-row-cell:empty .table-cell {
+    -fx-border-color: transparent;
+}
+
+/* CAMPOS DE TEXTO */
+.text-field {
+    -fx-background-color: #24244A;
+    -fx-text-fill: #F7F7FF;
+    -fx-prompt-text-fill: #8888AA;
+    -fx-border-color: #4EF3C9;
+    -fx-border-width: 1px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-padding: 8px 12px;
+    -fx-font-size: 14px;
+}
+.text-field:focused {
+    -fx-border-color: #FF2E88;
+    -fx-border-width: 2px;
+    -fx-effect: dropshadow(gaussian, #FF2E88, 8, 0.3, 0, 0);
+}
+
+/* CHECKBOX */
+.check-box {
+    -fx-text-fill: #F7F7FF;
+    -fx-font-size: 14px;
+}
+.check-box .box {
+    -fx-background-color: #24244A;
+    -fx-border-color: #4EF3C9;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 3px;
+}
+.check-box:selected .box {
+    -fx-background-color: #4EF3C9;
+}
+.check-box:selected .mark {
+    -fx-background-color: #1B1B3A;
+}
+
+/* BOTÕES */
+.button {
+    -fx-background-color: #4EF3C9;
+    -fx-text-fill: #1B1B3A;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 24px;
+    -fx-background-radius: 12px;
+    -fx-border-radius: 12px;
+    -fx-cursor: hand;
+}
+.button:hover {
+    -fx-background-color: #3AD4AD;
+    -fx-effect: dropshadow(gaussian, #4EF3C9, 12, 0.5, 0, 0);
+}
+.button:pressed {
+    -fx-background-color: #2BB895;
+    -fx-effect: dropshadow(gaussian, #4EF3C9, 6, 0.3, 0, 0);
+}
+
+/* BOTÃO DE EXCLUIR */
+.botao-excluir {
+    -fx-background-color: #FF2E88;
+    -fx-text-fill: #F7F7FF;
+}
+.botao-excluir:hover {
+    -fx-background-color: #E0256F;
+    -fx-effect: dropshadow(gaussian, #FF2E88, 12, 0.5, 0, 0);
+}
+.botao-excluir:pressed {
+    -fx-background-color: #C41D5E;
+}
+
+/* BOTÃO DE EDITAR */
+.botao-editar {
+    -fx-background-color: #FFD166;
+    -fx-text-fill: #1B1B3A;
+}
+.botao-editar:hover {
+    -fx-background-color: #E8BB55;
+    -fx-effect: dropshadow(gaussian, #FFD166, 12, 0.5, 0, 0);
+}
+.botao-editar:pressed {
+    -fx-background-color: #D4A84A;
+}
+.scroll-bar {
+    -fx-background-color: #1B1B3A;
+}
+.scroll-bar .thumb {
+    -fx-background-color: #4EF3C9;
+    -fx-background-radius: 10px;
+}
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+/* LAYOUT GERAL */
+.scroll-principal {
+    -fx-background-color: transparent;
+    -fx-background: #1B1B3A;
+}
+.grid-jogos {
+    -fx-background-color: #1B1B3A;
+}
+
+/* PAINEL DO FORMULÁRIO (LATERAL DIREITA) */
+.painel-form {
+    -fx-background-color: #24244A;
+    -fx-background-radius: 20px;
+    -fx-border-color: #4EF3C9;
+    -fx-border-width: 1px;
+    -fx-border-radius: 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 15, 0, -3, 0);
+}
+.form-titulo {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #4EF3C9;
+}
+.label-capa {
+    -fx-text-fill: #8888AA;
+    -fx-font-size: 9px;
+}
+
+/* CARDS DOS JOGOS */
+.card-jogo {
+    -fx-background-color: #24244A;
+    -fx-background-radius: 12px;
+    -fx-border-radius: 12px;
+    -fx-border-color: #3A3A6A;
+    -fx-border-width: 2px;
+    -fx-padding: 8px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 6, 0, 0, 2);
+}
+.card-jogo:hover {
+    -fx-border-color: #4EF3C9;
+    -fx-effect: dropshadow(gaussian, #4EF3C9, 10, 0.3, 0, 0);
+}
+.card-selecionado {
+    -fx-border-color: #FF2E88;
+    -fx-border-width: 2px;
+    -fx-effect: dropshadow(gaussian, #FF2E88, 10, 0.4, 0, 0);
+}
+.card-titulo {
+    -fx-text-fill: #F7F7FF;
+    -fx-font-size: 9px;
+    -fx-font-weight: bold;
+    -fx-text-overrun: ellipsis;
+}
+.card-nota {
+    -fx-text-fill: #FFD166;
+    -fx-font-size: 9px;
+}
+.card-plataforma {
+    -fx-text-fill: #8888AA;
+    -fx-font-size: 8px;
+}
+
+/* BOTÃO DE CAPA */
+.botao-capa {
+    -fx-background-color: #2A2A5A;
+    -fx-text-fill: #4EF3C9;
+    -fx-border-color: #4EF3C9;
+    -fx-border-width: 1px;
+    -fx-font-size: 9px;
+}
+.botao-capa:hover {
+    -fx-background-color: #3A3A7A;
+    -fx-effect: dropshadow(gaussian, #4EF3C9, 8, 0.3, 0, 0);
+}
+
+/* STATUS DE AÇÕES */
+.label-status {
+    -fx-font-size: 9px;
+    -fx-font-weight: bold;
+    -fx-padding: 12px;
+    -fx-background-color: #24244A;
+    -fx-background-radius: 12px;
+    -fx-border-radius: 12px;
+    -fx-border-color: #4EF3C9;
+    -fx-border-width: 1px;
+    -fx-alignment: center;
+    -fx-wrap-text: true;
+}
+
+/* PLACEHOLDER CAPA */
+.card-placeholder {
+    -fx-background-color: #2A2A5A;
+    -fx-background-radius: 8px;
+    -fx-alignment: center;
+    -fx-font-size: 40px;
+}

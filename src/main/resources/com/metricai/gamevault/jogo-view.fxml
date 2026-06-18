@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns = "http: //javafx.com/javafx"
+            xmlns:fx = "http: //javafx.com/fxml"
+            fx:controller = "com.metricai.gamevault.controller.JogoController"
+            styleClass = "root">
+
+    <!-- TOPO: TÍTULO e SUBTÍTULO -->
+    <top>
+        <VBox spacing="2" styleClass="header-box">
+            <padding><Insets top="15" left="20" bottom="10" right="20" /></padding>
+            <Label text="GAME VAULT" styleClass="titulo-app" />
+            <Label text="Gerencie e classifique seus jogos" styleClass="subtitulo" />
+        </VBox>
+    </top>
+
+    <!-- CENTRO: GRID DE CARDS DENTRO DE UM SCROLL -->
+    <center>
+        <ScrollPane fitToWidth="true" styleClass="scroll-principal">
+            <FlowPane fx:id="gridJogos" hgap="15" vgap="15" styleClass="grid-jogos">
+                <padding><Insets top="15" left="20" bottom="15" right="20" /></padding>
+            </FlowPane>
+        </ScrollPane>
+    </center>
+
+    <!-- DIREITA: PAINEL DE FORMULÁRIO -->
+    <right>
+        <VBox spacing="15">
+            <padding><Insets top="10" right="10" bottom="10" /></padding>
+
+            <VBox spacing="10" prefWidth="280" styleClass="painel-form">
+                <padding><Insets top="20" left="20" bottom="20" right="20" /></padding>
+
+                <Label text="Novo Jogo" styleClass="form-titulo" />
+
+                <TextField fx:id="campoTitulo" promptText="Título" />
+                <TextField fx:id="campoPlataforma" promptText="Plataforma" />
+                <TextField fx:id="campoNota" promptText="Nota (0 a 10)" />
+                <TextField fx:id="campoGenero" promptText="Gênero" />
+                <TextField fx:id="campoAnoLancamento" promptText="Ano" />
+                <CheckBox fx:id="campoZerado" text="Já zerei" />
+
+                <Button text="Escolher Capa" onAction="#escolherCapa" styleClass="button, botao-capa" maxWidth="Infinity" />
+                <Label fx:id="labelCapa" text="Nenhuma capa selecionada" styleClass="label-capa" />
+
+                <Button text="Salvar Jogo" onAction="#salvarJogo" maxWidth="Infinity" />
+                <Button text="Editar" onAction="#editarJogo" styleClass="button, botao-editar" maxWidth="Infinity" />
+                <Button text="Excluir" onAction="#excluirJogo" styleClass="button, botao-excluir" maxWidth="Infinity" />
+            </VBox>
+
+            <Label fx:id="labelStatus" text="" styleClass="label-status" maxWidth="280" wrapText="true" />
+        </VBox>
+    </right>
+</BorderPane>

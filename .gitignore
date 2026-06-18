@@ -1,0 +1,20 @@
+# Compilados e build
+target/
+*.class
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Maven wrapper (opcional, mas pesado)
+.mvn/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Credenciais (NUNCA subir pro GitHub)
+db.properties
