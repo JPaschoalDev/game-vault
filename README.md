@@ -16,7 +16,7 @@ Sistema de catálogo de jogos com interface visual estilo Steam.
 - Maven
 
 ## Screenshots
-*(adicione prints do sistema aqui depois)*
+*(Em construção, rsrs!)*
 
 ## Autor
 João Paschoal - [@JPaschoalDev](https://github.com/JPaschoalDev)
